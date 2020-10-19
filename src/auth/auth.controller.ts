@@ -24,7 +24,7 @@ export class AuthController {
 
     //JWT Strategy Test
     @Post('test')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('bearer'))
     test(@GetUser() user:User) {
         console.log(user)
     }
